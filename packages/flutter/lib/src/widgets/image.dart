@@ -360,8 +360,9 @@ class Image extends StatefulWidget {
 //        int cacheWidth,
 //        int cacheHeight,
 //      }) : image = _resizeIfNeeded(cacheWidth, cacheHeight, NetworkImage(src, scale: scale, headers: headers)),
-      }) : image = NetworkImage(src, scale: scale, headers: headers ),
+      }) : image = NetworkImage(src, scale: scale, headers: headers),
        assert(alignment != null),
+
        assert(repeat != null),
        assert(matchTextDirection != null),
 //        assert(cacheWidth == null || cacheWidth > 0),
