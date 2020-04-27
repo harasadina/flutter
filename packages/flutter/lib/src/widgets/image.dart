@@ -357,16 +357,15 @@ class Image extends StatefulWidget {
     this.gaplessPlayback = false,
     this.filterQuality = FilterQuality.low,
     Map<String, String> headers,
-//        int cacheWidth,
-//        int cacheHeight,
-//      }) : image = _resizeIfNeeded(cacheWidth, cacheHeight, NetworkImage(src, scale: scale, headers: headers)),
-      }) : image = NetworkImage(src, scale: scale, headers: headers),
+        int cacheWidth,
+        int cacheHeight,
+      }) : image = _resizeIfNeeded(cacheWidth, cacheHeight, NetworkImage(src, scale: scale, headers: headers)),
+//      }) : image = NetworkImage(src, scale: scale, headers: headers),
        assert(alignment != null),
-
        assert(repeat != null),
        assert(matchTextDirection != null),
-//        assert(cacheWidth == null || cacheWidth > 0),
-//        assert(cacheHeight == null || cacheHeight > 0),
+       assert(cacheWidth == null || cacheWidth > 0),
+       assert(cacheHeight == null || cacheHeight > 0),
        super(key: key);
 
   /// Creates a widget that displays an [ImageStream] obtained from a [File].
